@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Stone,Paper,Scissor Game</title>
+        <link rel="stylesheet" type="text/css" href="stone_paper_scissor_style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,200&icon_names=replay" />
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1>Welcome to the Stone, Paper, Scissor Game</h1>
+                <label id="round_counter">Round: 0</label><br>
+                <div id="result">
+                </div>
+            </div>
+            <div id="main-content">
+            <div class="player">
+                <h3>Player 1</h3>
+                <p>Choose your move:</p>
+                <button onclick="player1_choice1('stone'); toggleHighlight(this)" id="stone"></button>
+                <button onclick="player1_choice1('paper'); toggleHighlight(this)" id="paper"></button>
+                <button onclick="player1_choice1('scissor'); toggleHighlight(this)" id="scissor"></button>
+            </div>
+            <div>
+                <button onclick="play()" id="play"></button>
+                <button onclick="reset()" id="playagain"></button>
+            </div>
+            <div class="player" id="player2">
+                <h3 id="player2_h3">Player 2(Computer)</h3>
+                <div class="toggle-container">
+                    <span>CH</span>
+                    <label class="switch">
+                        <input type="checkbox" onchange="player2_choice2()" id="choose">
+                        <span class="slider"></span>
+                    </label>
+                    <span>SE</span>
+                </div>
+                <!-- <button onclick="player2_choice2()" id="choose"></button> -->
+            </div>
+        </div> 
+        </div>
+        <script src="stone_paper_scissor_script.js"></script>
+    </body>
+</html>
